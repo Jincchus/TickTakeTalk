@@ -1,0 +1,153 @@
+﻿
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Dashboard Template · Bootstrap v5.1</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.rtl.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/TicTakeTalk.WEB.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+
+     <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @@media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+  </head>
+  <body>
+    
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TicTakeTalk</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="SignIn" asp-action="Index">SignUp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="d-flex flex-nowrap">
+        <!-- 사이드 네비게이션 바 -->
+        <div id="main-bar" class="d-flex flex-column flex-shrink-0 bg-body-tertiary" style="width: auto;">
+            <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none">
+                Talk
+                <span class="visually-hidden">Icon-only</span>
+            </a>
+            <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                <li>
+                    <a href="#" class="nav-link py-3 border-bottom rounded-0 menu-item" data-target="alert">
+                        <i class="bi bi-bell"></i>
+                        <p>Alert</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link active py-3 border-bottom rounded-0 menu-item" data-target="talk">
+                        <i class="bi bi-chat-dots"></i>
+                        <p>Talk</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Friend" class="nav-link py-3 border-bottom rounded-0">
+                        <i class="bi bi-people"></i>
+                        <p>Friend</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Calendar" class="nav-link py-3 border-bottom rounded-0">
+                        <i class="bi bi-calendar3"></i>
+                        <p>Calendar</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link py-3 border-bottom rounded-0">
+                        <i class="bi bi-three-dots"></i>
+                        <p>More</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- sub_bar (Alert, Talk에서만 표시됨) -->
+        <div id="sub_bar" class="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary d-none" style="width: 380px;">
+            <div id="sub_bar_content"></div>
+        </div>
+
+        <!-- 메인 컨텐츠 -->
+        <div id="content">
+            @RenderBody()
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const subBar = document.getElementById("sub_bar");
+        const subBarContent = document.getElementById("sub_bar_content");
+
+        document.querySelectorAll(".menu-item").forEach(item => {
+            item.addEventListener("click", function (e) {
+                e.preventDefault();
+                const target = this.getAttribute("data-target");
+
+                if (target === "alert") {
+                    subBar.classList.remove("d-none");
+                    loadSubBarContent("/Alert/AlertSubBar");
+                } else if (target === "talk") {
+                    subBar.classList.remove("d-none");
+                    loadSubBarContent("/Talk/TalkSubBar");
+                } else {
+                    subBar.classList.add("d-none");
+                    window.location.href = "/" + target.charAt(0).toUpperCase() + target.slice(1);
+                }
+            });
+        });
+
+        function loadSubBarContent(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    subBarContent.innerHTML = html;
+                })
+                .catch(error => console.error("Error loading content:", error));
+        }
+    });
+
+</script>

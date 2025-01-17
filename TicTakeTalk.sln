@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTakeTalk.Web", "TicTakeTalk.Web\TicTakeTalk.Web.csproj", "{C2F13DC4-9547-4A61-A22E-7D6F78870D17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4083CD73-CE92-478C-B772-9FB2FDDF8310}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicTakeTalk.Infrastructure", "TicTakeTalk.Infrastructure\TicTakeTalk.Infrastructure.csproj", "{F5099089-5AED-4F16-A835-8E9BC8E29820}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTakeTalk.Core", "TicTakeTalk.Core\TicTakeTalk.Core.csproj", "{F4B01C51-79AC-4217-99D5-E14C67800571}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2F13DC4-9547-4A61-A22E-7D6F78870D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F13DC4-9547-4A61-A22E-7D6F78870D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F13DC4-9547-4A61-A22E-7D6F78870D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F13DC4-9547-4A61-A22E-7D6F78870D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5099089-5AED-4F16-A835-8E9BC8E29820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5099089-5AED-4F16-A835-8E9BC8E29820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5099089-5AED-4F16-A835-8E9BC8E29820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5099089-5AED-4F16-A835-8E9BC8E29820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4B01C51-79AC-4217-99D5-E14C67800571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4B01C51-79AC-4217-99D5-E14C67800571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4B01C51-79AC-4217-99D5-E14C67800571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4B01C51-79AC-4217-99D5-E14C67800571}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C2F13DC4-9547-4A61-A22E-7D6F78870D17} = {4083CD73-CE92-478C-B772-9FB2FDDF8310}
+		{F5099089-5AED-4F16-A835-8E9BC8E29820} = {4083CD73-CE92-478C-B772-9FB2FDDF8310}
+		{F4B01C51-79AC-4217-99D5-E14C67800571} = {4083CD73-CE92-478C-B772-9FB2FDDF8310}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77CE8C72-41F7-4968-BB08-0483299A3F18}
+	EndGlobalSection
+EndGlobal
