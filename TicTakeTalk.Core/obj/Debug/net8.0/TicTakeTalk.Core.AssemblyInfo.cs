@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TicTakeTalk.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b1da1550bb1d7776c0b2ac9c1425f1086339a93")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd2c38903c62f38a3e6fa7b6f0f606d44e9afc43")]
 [assembly: System.Reflection.AssemblyProductAttribute("TicTakeTalk.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TicTakeTalk.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

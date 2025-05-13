@@ -8,19 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\박경진.AzureAD\\.nuget\\packages\\": {}
+    "C:\\Users\\박경진.AzureAD\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\TicTakeTalk\\TicTakeTalk.WEB\\TicTakeTalk.WEB.csproj",
-      "projectName": "TicTakeTalk.WEB",
-      "projectPath": "C:\\TicTakeTalk\\TicTakeTalk.WEB\\TicTakeTalk.WEB.csproj",
+      "projectUniqueName": "C:\\TicTakeTalk\\TicTakeTalk.Web\\TicTakeTalk.Web.csproj",
+      "projectName": "TicTakeTalk.Web",
+      "projectPath": "C:\\TicTakeTalk\\TicTakeTalk.Web\\TicTakeTalk.Web.csproj",
       "packagesPath": "C:\\Users\\박경진.AzureAD\\.nuget\\packages\\",
-      "outputPath": "C:\\TicTakeTalk\\TicTakeTalk.WEB\\obj\\",
+      "outputPath": "C:\\TicTakeTalk\\TicTakeTalk.Web\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\박경진.AzureAD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -47,7 +52,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -71,7 +77,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

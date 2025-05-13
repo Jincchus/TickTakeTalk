@@ -60,22 +60,22 @@
             </div>
         </nav>
     </header>
-    <main class="d-flex flex-nowrap">
+    <main class="d-flex flex-nowrap" style=" height: 100%;">
         <!-- 사이드 네비게이션 바 -->
-        <div id="main-bar" class="d-flex flex-column flex-shrink-0 bg-body-tertiary" style="width: auto;">
+        <div id="main-bar" class="d-flex flex-column flex-shrink-0 bg-body-tertiary col-1" style="width: auto;">
             <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none">
                 Talk
                 <span class="visually-hidden">Icon-only</span>
             </a>
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                 <li>
-                    <a href="#" class="nav-link py-3 border-bottom rounded-0 menu-item" data-target="alert">
+                    <a href="/Alert" class="nav-link py-3 border-bottom rounded-0 menu-item" data-target="alert">
                         <i class="bi bi-bell"></i>
                         <p>Alert</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link active py-3 border-bottom rounded-0 menu-item" data-target="talk">
+                    <a href="/Talk" class="nav-link active py-3 border-bottom rounded-0 menu-item" data-target="talk">
                         <i class="bi bi-chat-dots"></i>
                         <p>Talk</p>
                     </a>
@@ -101,15 +101,8 @@
             </ul>
         </div>
 
-        <!-- sub_bar (Alert, Talk에서만 표시됨) -->
-        <div id="sub_bar" class="d-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary d-none" style="width: 380px;">
-            <div id="sub_bar_content"></div>
-        </div>
-
         <!-- 메인 컨텐츠 -->
-        <div id="content">
-            @RenderBody()
-        </div>
+        @RenderBody()
     </main>
 
 
@@ -118,36 +111,36 @@
 </html>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const subBar = document.getElementById("sub_bar");
-        const subBarContent = document.getElementById("sub_bar_content");
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     const subBar = document.getElementById("sub_bar");
+    //     const subBarContent = document.getElementById("sub_bar_content");
 
-        document.querySelectorAll(".menu-item").forEach(item => {
-            item.addEventListener("click", function (e) {
-                e.preventDefault();
-                const target = this.getAttribute("data-target");
+    //     document.querySelectorAll(".menu-item").forEach(item => {
+    //         item.addEventListener("click", function (e) {
+    //             e.preventDefault();
+    //             const target = this.getAttribute("data-target");
 
-                if (target === "alert") {
-                    subBar.classList.remove("d-none");
-                    loadSubBarContent("/Alert/AlertSubBar");
-                } else if (target === "talk") {
-                    subBar.classList.remove("d-none");
-                    loadSubBarContent("/Talk/TalkSubBar");
-                } else {
-                    subBar.classList.add("d-none");
-                    window.location.href = "/" + target.charAt(0).toUpperCase() + target.slice(1);
-                }
-            });
-        });
+    //             if (target === "alert") {
+    //                 subBar.classList.remove("d-none");
+    //                 loadSubBarContent("/Alert/AlertSubBar");
+    //             } else if (target === "talk") {
+    //                 subBar.classList.remove("d-none");
+    //                 loadSubBarContent("/Talk/TalkSubBar");
+    //             } else {
+    //                 subBar.classList.add("d-none");
+    //                 window.location.href = "/" + target.charAt(0).toUpperCase() + target.slice(1);
+    //             }
+    //         });
+    //     });
 
-        function loadSubBarContent(url) {
-            fetch(url)
-                .then(response => response.text())
-                .then(html => {
-                    subBarContent.innerHTML = html;
-                })
-                .catch(error => console.error("Error loading content:", error));
-        }
-    });
+    //     function loadSubBarContent(url) {
+    //         fetch(url)
+    //             .then(response => response.text())
+    //             .then(html => {
+    //                 subBarContent.innerHTML = html;
+    //             })
+    //             .catch(error => console.error("Error loading content:", error));
+    //     }
+    // });
 
 </script>

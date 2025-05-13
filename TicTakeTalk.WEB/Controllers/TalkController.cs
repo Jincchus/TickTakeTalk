@@ -9,6 +9,12 @@ namespace TicTakeTalk.Web.Controllers
             return View();
         }
 
+
+        public IActionResult Detail()
+        {
+            return View();
+        }
+
         public IActionResult TalkSubBar()
         {
             return View();

@@ -30,3 +30,7 @@ C:\TicTakeTalk\TicTakeTalk.Web\obj\Debug\net8.0\TicTakeTalk.Web.pdb
 C:\TicTakeTalk\TicTakeTalk.Web\obj\Debug\net8.0\TicTakeTalk.Web.genruntimeconfig.cache
 C:\TicTakeTalk\TicTakeTalk.Web\obj\Debug\net8.0\ref\TicTakeTalk.Web.dll
 C:\TicTakeTalk\TicTakeTalk.Web\obj\Debug\net8.0\scopedcss\Views\Shared\_LoginLayout.cshtml.rz.scp.css
+C:\TicTakeTalk\TicTakeTalk.Web\bin\Debug\net8.0\TicTakeTalk.Web.staticwebassets.endpoints.json
+C:\TicTakeTalk\TicTakeTalk.Web\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\TicTakeTalk\TicTakeTalk.Web\obj\Debug\net8.0\staticwebassets\msbuild.TicTakeTalk.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\TicTakeTalk\TicTakeTalk.Web\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
